@@ -10,8 +10,17 @@ else if(computerChoice <= 0.67) {
 else {
 	computerChoice = "scissors";
 } 
-
 console.log("Computer: " + computerChoice);
+//untuk mengatasi salah input
+if (userChoice === "rock"){
+    console.log(compare(userChoice, computerChoice));
+} else if (userChoice === "paper"){
+    console.log(compare(userChoice, computerChoice));
+} else if (userChoice === "scissors"){
+    console.log(compare(userChoice, computerChoice));
+} else {
+    console.log("You use the wrong words!")
+}
 
 var compare= function(choice1, choice2){
     if (choice1 === choice2){
@@ -42,5 +51,3 @@ var compare= function(choice1, choice2){
         }
     }
 };
-
-console.log(compare(userChoice, computerChoice));
